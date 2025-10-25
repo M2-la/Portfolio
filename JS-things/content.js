@@ -8,7 +8,11 @@ async function onConfigChange(config) {
   if (studentNameEl) studentNameEl.textContent = config.student_name || defaultConfig.student_name;
   if (studentTitleEl) studentTitleEl.textContent = config.student_title || defaultConfig.student_title;
   if (aboutTextEl) aboutTextEl.textContent = config.about_text || defaultConfig.about_text;
-  if (emailEl) emailEl.textContent = config.email_address || defaultConfig.email_address;
+  if (emailEl) {
+    const email = config.email_address || defaultConfig.email_address;
+    // insert a mailto link so clicking opens the user's mail client
+    emailEl.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+  }
   if (phoneEl) phoneEl.textContent = config.phone_number || defaultConfig.phone_number;
 
   document.documentElement.style.setProperty('--primary-color', config.primary_color || defaultConfig.primary_color);

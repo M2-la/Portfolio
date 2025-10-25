@@ -5,66 +5,239 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Professionnel</title>
 
-  <!-- SDK -->
-  <script src="/_sdk/element_sdk.js"></script>
-  <script src="/_sdk/data_sdk.js"></script>
+  <!-- SDK (commenté localement — décommentez si vous avez un dossier _sdk en production) -->
+  <!-- <script src="/_sdk/element_sdk.js"></script> -->
+  <!-- <script src="/_sdk/data_sdk.js"></script> -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fallback si JS désactivé ou si les animations ne s'exécutent pas -->
+  <noscript>
+    <style>
+      /* Montrer les lignes de code si l'animation/typewriter ne tourne pas */
+      .code-line { opacity: 1 !important; animation: none !important; }
+      /* S'assurer que les cartes/projets/contacts sont visibles */
+      .project-card, .skill-item, .contact-item { opacity: 1 !important; transform: none !important; }
+      /* Afficher le menu si responsive cache le menu en mode desktop par erreur */
+      .nav-menu { display: flex !important; }
+    </style>
+  </noscript>
 
   <!-- CSS par composants -->
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/navigation.css" />
-  <link rel="stylesheet" href="assets/css/hero.css" />
-  <link rel="stylesheet" href="assets/css/profile.css" />
-  <link rel="stylesheet" href="assets/css/cv-button.css" />
-  <link rel="stylesheet" href="assets/css/particles.css" />
-  <link rel="stylesheet" href="assets/css/about.css" />
-  <link rel="stylesheet" href="assets/css/skills.css" />
-  <link rel="stylesheet" href="assets/css/code-animation.css" />
-  <link rel="stylesheet" href="assets/css/projects.css" />
-  <link rel="stylesheet" href="assets/css/project-card.css" />
-  <link rel="stylesheet" href="assets/css/tech-tag.css" />
-  <link rel="stylesheet" href="assets/css/contact.css" />
-  <link rel="stylesheet" href="assets/css/contact-item.css" />
-  <link rel="stylesheet" href="assets/css/animations.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <!-- Liens CSS corrigés vers le dossier réel 'Css/' du projet -->
+  <link rel="stylesheet" href="Css/base.css" />
+  <link rel="stylesheet" href="Css/navigation.css" />
+  <link rel="stylesheet" href="Css/hero.css" />
+  <link rel="stylesheet" href="Css/profile.css" />
+  <link rel="stylesheet" href="Css/cv-button.css" />
+  <link rel="stylesheet" href="Css/particles.css" />
+  <link rel="stylesheet" href="Css/about.css" />
+  <link rel="stylesheet" href="Css/skills.css" />
+  <link rel="stylesheet" href="Css/code-animation.css" />
+  <link rel="stylesheet" href="Css/project.css" />
+  <link rel="stylesheet" href="Css/project-card.css" />
+  <link rel="stylesheet" href="Css/tech-tag.css" />
+  <link rel="stylesheet" href="Css/contact.css" />
+  <link rel="stylesheet" href="Css/contact-item.css" />
+  <link rel="stylesheet" href="Css/animation.css" />
+  <link rel="stylesheet" href="Css/responsive.css" />
 
   <!-- View Transition -->
-  <style>@view-transition { navigation: auto; }</style>
-</head>
-<body>
-  <!-- 🧭 Navigation -->
-  <nav class="navbar">
-    <!-- ... contenu navbar ... -->
-  </nav>
+  <!doctype html>
+  <html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Professionnel</title>
 
-  <!-- 🏠 Hero Section -->
-  <section id="home" class="hero">
-    <!-- ... contenu hero ... -->
-  </section>
+    <!-- SDK (décommentez si vous avez un dossier _sdk servi à la racine) -->
+    <!-- <script src="/_sdk/element_sdk.js"></script> -->
+    <!-- <script src="/_sdk/data_sdk.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- 👤 About Section -->
-  <section id="about" class="about">
-    <!-- ... contenu about ... -->
-  </section>
+    <!-- Styles (dossier local 'Css/') -->
+    <link rel="stylesheet" href="Css/base.css" />
+    <link rel="stylesheet" href="Css/navigation.css" />
+    <link rel="stylesheet" href="Css/hero.css" />
+    <link rel="stylesheet" href="Css/profile.css" />
+    <link rel="stylesheet" href="Css/cv-button.css" />
+    <link rel="stylesheet" href="Css/particles.css" />
+    <link rel="stylesheet" href="Css/about.css" />
+    <link rel="stylesheet" href="Css/skills.css" />
+    <link rel="stylesheet" href="Css/code-animation.css" />
+    <link rel="stylesheet" href="Css/project.css" />
+    <link rel="stylesheet" href="Css/project-card.css" />
+    <link rel="stylesheet" href="Css/tech-tag.css" />
+    <link rel="stylesheet" href="Css/contact.css" />
+    <link rel="stylesheet" href="Css/contact-item.css" />
+    <link rel="stylesheet" href="Css/animation.css" />
+    <link rel="stylesheet" href="Css/responsive.css" />
 
-  <!-- 🚀 Projects Section -->
-  <section id="projects" class="projects">
-    <!-- ... contenu projets ... -->
-  </section>
+    <style>@view-transition { navigation: auto; }</style>
 
-  <!-- 📞 Contact Section -->
-  <section id="contact" class="contact">
-    <!-- ... contenu contact ... -->
-  </section>
+    <!-- Fallback si JS désactivé ou si animations ne tournent pas -->
+    <noscript>
+      <style>
+        .code-line { opacity: 1 !important; animation: none !important; }
+        .project-card, .skill-item, .contact-item { opacity: 1 !important; transform: none !important; }
+        .nav-menu { display: flex !important; }
+      </style>
+    </noscript>
+  </head>
 
-  <!-- JS par modules -->
-  <script src="assets/js/config.js"></script>
-  <script src="assets/js/content.js"></script>
-  <script src="assets/js/capabilities.js"></script>
-  <script src="assets/js/sdk-init.js"></script>
-  <script src="assets/js/navigation.js"></script>
-  <script src="assets/js/scroll-animations.js"></script>
-  <script src="assets/js/parallax.js"></script>
-  <script src="assets/js/download-cv.js"></script>
-</body>
-</html>
+  <body>
+    <!-- NAV -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Accueil</a></li>
+          <li><a href="#about" class="nav-link">À Propos</a></li>
+          <li><a href="#projects" class="nav-link">Projets</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 id="student-name">Latif SEBOGO</h1>
+          <p class="subtitle" id="student-title">Pré-MSc - Intelligence Artificielle &amp; Transformation Digitale (Epitech Bordeaux)</p>
+          <p class="description" id="about-text">Actuellement en pré-MSc d'Epitech, je prépare un Master en Intelligence Artificielle et Transformation Digitale. Curieux et polyvalent, je développe mes compétences en développement web, systèmes d'information, automatisation et outils numériques via des projets concrets.</p>
+          <a href="#projects" class="cta-button">Découvrir mes projets</a>
+        </div>
+
+        <div class="hero-image">
+          <div class="profile-photo">
+            <div class="profile-inner">
+              <img src="assets/photodeprofil.png" class="profile-img" />
+            </div>
+            <a href="#" class="cv-download" onclick="downloadCV(event)">📄 Télécharger CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>À Propos de Moi</h2>
+          <p>Étudiant en MSC (Master of Science in Engineering Computer Science) à Epitech, je me spécialise dans l'intelligence artificielle et les systèmes d'information.</p>
+          <p>Ma passion pour la transformation digitale m'amène à explorer les dernières technologies pour créer des solutions qui révolutionnent la façon dont les entreprises opèrent.</p>
+
+          <div class="skills-grid">
+            <div class="skill-item">Python</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">C#</div>
+            <div class="skill-item">HTML / CSS</div>
+            <div class="skill-item">SQL</div>
+            <div class="skill-item">Power BI</div>
+            <div class="skill-item">Excel</div>
+            <div class="skill-item">Sage BI / EBP / Diapason</div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <div class="code-animation">
+            <div class="code-line">class Developer:</div>
+            <div class="code-line">def __init__(self):</div>
+            <div class="code-line">self.name = "Latif SEBOGO"</div>
+            <div class="code-line">self.school = "Epitech Bordeaux (Pré-MSc)"</div>
+            <div class="code-line">self.passion = "AI, Transformation Digitale"</div>
+            <div class="code-line">self.goals = "Automatisation &amp; modernisation des processus"</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+      <div class="projects-container">
+        <h2 class="section-title">Mes Projets</h2>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-icon">🤖</div>
+            <h3 class="project-title" role="button" tabindex="0" data-images="assets/jboard1.png,assets/jboard2.png,assets/jboard3.png,assets/jboard4.png,assets/jboard5.png">App Jobboard responsive first</h3>
+            <p>Développement d'une application de type jobboard en responsive design, facilitant la recherche d'emploi et la publication d'offres.</p>
+            <div class="project-tech"><span class="tech-tag">Vite</span> <span class="tech-tag">React (JSX)</span> <span class="tech-tag">Node.js</span> <span class="tech-tag">Express (API REST)</span> <span class="tech-tag">Docker</span> <span class="tech-tag">MySQL</span></div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">📊</div>
+              <h3 class="project-title" role="button" tabindex="0" data-images="assets/dresume/dresume1.png,assets/dresume/dresume2.png,assets/dresume/dresume3.png,assets/dresume/dresume4.png">Digital resume</h3>
+            <p>CV numérique interactif et responsive présentant mon parcours, compétences et projets. Intègre animations CSS, visualisations de données, téléchargement du CV en PDF, et un mode clair/sombre. Déployé en statique (ex. GitHub Pages) avec optimisation accessibilité et performance.</p>
+            <div class="project-tech"><span class="tech-tag">HTML</span> <span class="tech-tag">CSS</span></div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">🔄</div>
+            <h3 class="project-title" role="button" tabindex="0" data-images="assets/API/API1.png,assets/API/API2.png">API de Transformation</h3>
+            <p>API REST pour la transformation digitale permettant l'intégration de systèmes legacy avec des solutions modernes.</p>
+            <div class="project-tech"><span class="tech-tag">Node.js</span> <span class="tech-tag">Express</span> <span class="tech-tag">MongoDB</span> <span class="tech-tag">AWS</span></div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-icon">🎯</div>
+            <h3 class="project-title" role="button" tabindex="0" data-images="assets/dashboard/dashboard1.png,assets/dashboard/dashboard2.png">Dashboard Analytics</h3>
+            <p>Interface de visualisation de données en temps réel pour le monitoring des KPIs d'entreprise.</p>
+            <div class="project-tech"><span class="tech-tag">Vue.js</span> <span class="tech-tag">D3.js</span> <span class="tech-tag">WebSocket</span> <span class="tech-tag">Redis</span></div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-icon">⚙️</div>
+            <h3 class="project-title" role="button" tabindex="0" data-images="assets/BC/BC1.webp,assets/BC/BC2.jpg">Gestion de projet — Modification nomenclature &amp; Bon de commande fournisseur</h3>
+            <p>Refonte de la nomenclature produits et automatisation du processus de bon de commande fournisseur.</p>
+            <div class="project-tech"><span class="tech-tag">HTML</span> <span class="tech-tag">CSS</span> <span class="tech-tag">Python</span> <span class="tech-tag">Node.js</span> <span class="tech-tag">PHP</span></div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-icon">🗄️</div>
+            <h3 class="project-title" role="button" tabindex="0" data-images="assets/GMAO/GMAO1.png,assets/GMAO/GMAO2.png">GMAO — Conception de bases de données</h3>
+            <p>Conception et implémentation d'une base de données pour GMAO (Gestion de Maintenance Assistée par Ordinateur) afin de centraliser équipements, interventions, fournisseurs et historiques de maintenance.</p>
+            <div class="project-tech"><span class="tech-tag">MySQL</span> <span class="tech-tag">MongoDB</span> <span class="tech-tag">SQL</span> <span class="tech-tag">Python</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="contact-container">
+        <h2>Contactez-moi</h2>
+        <p>Intéressé par une collaboration ou souhaitez discuter d'un projet ? N'hésitez pas à me contacter !</p>
+
+        <div class="contact-info">
+          <div class="contact-item"><h3>📧 Email</h3><p id="email-address"><a href="mailto:latifmeshac@gmail.com">latifmeshac@gmail.com</a></p></div>
+          <div class="contact-item"><h3>📱 Téléphone</h3><p id="phone-number">06 16 53 03 62</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JS modules (dossier local 'JS-things/') -->
+    <script src="JS-things/config.js"></script>
+    <script src="JS-things/content.js"></script>
+    <script src="JS-things/capabilities.js"></script>
+    <script src="JS-things/sdk-int.js"></script>
+    <script src="JS-things/navigation.js"></script>
+    <script src="JS-things/scroll-animations.js"></script>
+    <script src="JS-things/paralax.js"></script>
+    <script src="JS-things/download-cv.js"></script>
+    <script src="JS-things/project-overlay.js"></script>
+
+    <!-- Project overlay (injects images when clicking project titles) -->
+    <div id="project-overlay" class="project-overlay" aria-hidden="true">
+      <div class="overlay-content" role="dialog" aria-modal="true">
+        <button id="overlay-close" class="overlay-close" aria-label="Fermer">✕</button>
+        <h3 id="overlay-title">Titre du projet</h3>
+        <div id="overlay-gallery" class="overlay-gallery"></div>
+      </div>
+    </div>
+
+  </body>
+  </html>

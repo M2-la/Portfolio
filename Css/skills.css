@@ -1,0 +1,21 @@
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.skill-item {
+    background: linear-gradient(45deg, #000000, #000000, #3e3e3e);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.325);
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 0, 0, 0.126);
+    box-shadow: 0 10px 20px rgba(13, 10, 36, 0.273);
+}

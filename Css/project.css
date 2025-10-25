@@ -1,0 +1,22 @@
+.projects {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--background-color) 0% #6f73a8, #6f73a8 100%);
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}

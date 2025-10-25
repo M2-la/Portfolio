@@ -15,7 +15,15 @@ html, body {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #ffffff;
+    /* Theme variables (used across CSS). Keep in sync with JS defaultConfig if needed */
+    --primary-color: #040404;
+    --background-color: #121217;
+    --surface-color: #1a1a2e;
+    --text-color: #e2e8f0;
+    --accent-color: #e9ebeb;
+
+    /* Global background (fallback) */
+    background: linear-gradient(135deg, var(--background-color) 0%, #565353 100%);
+    color: var(--text-color);
     overflow-x: hidden;
 }
