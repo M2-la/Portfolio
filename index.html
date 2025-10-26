@@ -69,6 +69,15 @@
     </div>
   </section>
 
+  <!-- Project overlay (injects images when clicking project titles) -->
+  <div id="project-overlay" class="project-overlay" aria-hidden="true">
+    <div class="overlay-content" role="dialog" aria-modal="true">
+      <button id="overlay-close" class="overlay-close" aria-label="Fermer">✕</button>
+      <h3 id="overlay-title">Titre du projet</h3>
+      <div id="overlay-gallery" class="overlay-gallery"></div>
+    </div>
+  </div>
+
   <!-- ABOUT -->
   <section id="about" class="about">
     <div class="about-container">
@@ -107,7 +116,47 @@
     <div class="projects-container">
       <h2 class="section-title">Mes Projets</h2>
       <div class="projects-grid">
-        <!-- project cards omitted for brevity (kept in original indexx.html) -->
+        <div class="project-card">
+          <div class="project-icon">🤖</div>
+          <h3 class="project-title" role="button" tabindex="0" data-images="assets/jboard1.png,assets/jboard2.png,assets/jboard3.png,assets/jboard4.png,assets/jboard5.png">App Jobboard responsive first</h3>
+          <p>Développement d'une application de type jobboard en responsive design, facilitant la recherche d'emploi et la publication d'offres.</p>
+          <div class="project-tech"><span class="tech-tag">Vite</span> <span class="tech-tag">React (JSX)</span> <span class="tech-tag">Node.js</span> <span class="tech-tag">Express (API REST)</span> <span class="tech-tag">Docker</span> <span class="tech-tag">MySQL</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">📊</div>
+            <h3 class="project-title" role="button" tabindex="0" data-images="assets/dresume/dresume1.png,assets/dresume/dresume2.png,assets/dresume/dresume3.png,assets/dresume/dresume4.png">Digital resume</h3>
+          <p>CV numérique interactif et responsive présentant mon parcours, compétences et projets. Intègre animations CSS, visualisations de données, téléchargement du CV en PDF, et un mode clair/sombre. Déployé en statique (ex. GitHub Pages) avec optimisation accessibilité et performance.</p>
+          <div class="project-tech"><span class="tech-tag">HTML</span> <span class="tech-tag">CSS</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">🔄</div>
+          <h3 class="project-title" role="button" tabindex="0" data-images="assets/API/API1.png,assets/API/API2.png">API de Transformation</h3>
+          <p>API REST pour la transformation digitale permettant l'intégration de systèmes legacy avec des solutions modernes.</p>
+          <div class="project-tech"><span class="tech-tag">Node.js</span> <span class="tech-tag">Express</span> <span class="tech-tag">MongoDB</span> <span class="tech-tag">AWS</span></div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">🎯</div>
+          <h3 class="project-title" role="button" tabindex="0" data-images="assets/dashboard/dashboard1.png,assets/dashboard/dashboard2.png">Dashboard Analytics</h3>
+          <p>Interface de visualisation de données en temps réel pour le monitoring des KPIs d'entreprise.</p>
+          <div class="project-tech"><span class="tech-tag">Vue.js</span> <span class="tech-tag">D3.js</span> <span class="tech-tag">WebSocket</span> <span class="tech-tag">Redis</span></div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-icon">⚙️</div>
+          <h3 class="project-title" role="button" tabindex="0" data-images="assets/BC/BC1.webp,assets/BC/BC2.jpg">Gestion de projet — Modification nomenclature &amp; Bon de commande fournisseur</h3>
+          <p>Refonte de la nomenclature produits et automatisation du processus de bon de commande fournisseur.</p>
+          <div class="project-tech"><span class="tech-tag">HTML</span> <span class="tech-tag">CSS</span> <span class="tech-tag">Python</span> <span class="tech-tag">Node.js</span> <span class="tech-tag">PHP</span></div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-icon">🗄️</div>
+          <h3 class="project-title" role="button" tabindex="0" data-images="assets/GMAO/GMAO1.png,assets/GMAO/GMAO2.png">GMAO — Conception de bases de données</h3>
+          <p>Conception et implémentation d'une base de données pour GMAO (Gestion de Maintenance Assistée par Ordinateur) afin de centraliser équipements, interventions, fournisseurs et historiques de maintenance.</p>
+          <div class="project-tech"><span class="tech-tag">MySQL</span> <span class="tech-tag">MongoDB</span> <span class="tech-tag">SQL</span> <span class="tech-tag">Python</span></div>
+        </div>
       </div>
     </div>
   </section>

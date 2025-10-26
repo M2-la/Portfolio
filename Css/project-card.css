@@ -31,6 +31,16 @@
     color: #ffffff;
 }
 
+/* Make project titles appear clickable and keyboard-focusable */
+.project-title {
+    cursor: pointer;
+}
+
+.project-title:focus {
+    outline: 3px solid rgba(0,122,204,0.25);
+    outline-offset: 4px;
+}
+
 .project-card p {
     opacity: 0.8;
     line-height: 1.6;
