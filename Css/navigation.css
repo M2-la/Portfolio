@@ -24,9 +24,18 @@
 }
 
 .nav-menu {
-    display: flex;
+    /* Mobile-first: hide menu by default and show a burger/menu toggle in JS if needed */
+    display: none;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+/* Desktop styles (apply from tablet/desktop and up) */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: flex;
+        gap: 2rem;
+    }
 }
 
 .nav-link {
